@@ -13,6 +13,23 @@ const app = new Elysia()
   .use(signOut)
   .use(getProfile)
   .use(getManagedRestaurant)
+  .onError(({ code, error, set }) => {
+    switch (code) {
+      case 'VALIDATION': {
+        set.status = 400
+        return error.toResponse()
+      }
+      default: {
+        set.status = 500
+        console.error(error)
+
+        return {
+          code,
+          message: 'Internal Server Error',
+        }
+      }
+    }
+  })
 
 app.listen(3333, () => {
   console.log(`🚀 Server is running on http://localhost:3333`)
