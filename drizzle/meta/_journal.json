@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1710612315392,
+      "tag": "0000_long_omega_flight",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1710619542534,
+      "tag": "0001_wealthy_lilith",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1710632129504,
+      "tag": "0002_next_kang",
+      "breakpoints": true
+    }
+  ]
+}
