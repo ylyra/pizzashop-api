@@ -10,8 +10,8 @@ const connection = postgres(env.DATABASE_URL, {
 })
 const db = drizzle(connection)
 
-await migrate(db,  {
-  migrationsFolder: 'drizzle'
+await migrate(db, {
+  migrationsFolder: 'drizzle',
 })
 
 console.log(chalk.greenBright('Migrations applied successfully!'))
