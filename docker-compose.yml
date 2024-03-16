@@ -10,7 +10,7 @@ services:
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=pizzashop
     volumes:
-      - postgres_data:/bitnami/postgresql
+      - pizzashop_api:/bitnami/postgresql
 
 volumes:
-  postgres_data:
+  pizzashop_api:
