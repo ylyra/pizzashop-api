@@ -5,7 +5,7 @@ import { orderItems } from './order-items'
 import { restaurants } from './restaurants'
 import { users } from './users'
 
-export const orderStatusenum = pgEnum('order_status', [
+export const orderStatusEnum = pgEnum('order_status', [
   'pending',
   'processing',
   'delivering',
@@ -23,7 +23,7 @@ export const orders = pgTable('orders', {
     .references(() => restaurants.id, {
       onDelete: 'cascade',
     }),
-  status: orderStatusenum('status').default('pending').notNull(),
+  status: orderStatusEnum('status').default('pending').notNull(),
   totalInCents: integer('total_in_cents').notNull(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),

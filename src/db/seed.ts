@@ -6,7 +6,7 @@ import { db } from './connection'
 import {
   authLinks,
   orderItems,
-  orderStatusenum,
+  orderStatusEnum,
   orders,
   products,
   restaurants,
@@ -154,7 +154,7 @@ for (let i = 0; i < 200; i++) {
     restaurantId: restaurant.id,
     customerId: faker.helpers.arrayElement([customer1, customer2]).id,
     totalInCents,
-    status: faker.helpers.arrayElement(orderStatusenum.enumValues),
+    status: faker.helpers.arrayElement(orderStatusEnum.enumValues),
     createdAt: faker.date.recent({
       days: 40,
     }),
