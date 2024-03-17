@@ -20,7 +20,7 @@ export const orders = pgTable('orders', {
   }),
   restaurantId: text('restaurant_id')
     .notNull()
-    .references(() => users.id, {
+    .references(() => restaurants.id, {
       onDelete: 'cascade',
     }),
   status: orderStatusenum('status').default('pending').notNull(),

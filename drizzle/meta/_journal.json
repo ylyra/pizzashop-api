@@ -22,6 +22,13 @@
       "when": 1710632129504,
       "tag": "0002_next_kang",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1710633746026,
+      "tag": "0003_panoramic_russian",
+      "breakpoints": true
     }
   ]
 }
